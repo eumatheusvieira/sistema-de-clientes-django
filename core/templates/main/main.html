@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/main.css' %}">
+    <title>Pagina Inicial</title>
+</head>
+<body style="font-family: Arial;">
+    <header style="margin-bottom: 10px;">
+        <a href="logout/" style="display: flex; justify-content: end; text-decoration: none; color: blue; font-family: Arial;">Logout</a>
+    </header>
+    <p>Aqui você visualizará todos os clientes cadastrados no seu sistema.</p>
+    <div class="card">
+        <div class="card-body">
+            <hr>
+            <h3 style="margin-left: 20px;">CLIENTES</h3>
+            <hr>
+            <a class="add" href="{% url 'clientes_add' %}" style="text-decoration: none; margin-top: 40px;">Adicionar</a>
+            <hr>
+            <table class="table" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Data de Nascimento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody style="text-align: center;">
+                {% for cliente in clientes %}
+                    <tr>
+                        <td>{{ cliente.nome }}</td>
+                        <td>{{ cliente.email }}</td>
+                        <td>{{ cliente.data_nascimento }}</td>
+                        <td>
+                            <a class="edit" href="{% url 'clientes_edit' cliente.id %}" style="text-decoration: none;">Editar</a>
+                            <a class="delete" href="{% url 'clientes_delete' cliente.id %}" style="text-decoration: none" onclick="return confirm('Tem certeza que deseja excluir esse cliente?')">Excluir</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

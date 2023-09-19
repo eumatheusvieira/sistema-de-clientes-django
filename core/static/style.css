@@ -1,0 +1,72 @@
+body {
+    font-family: Arial;
+    background-color: rgb(59, 14, 85);
+}
+
+.quadro {
+    padding: 0%;
+    margin-top: 50px;
+    margin-left: 350px;
+    margin-right: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 12px;
+    
+}
+
+.titulo {
+    border-style: solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-width: 2px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+.nome {
+
+    margin-top: 10px;
+    margin-right: 150px;
+    margin-bottom: 5px;
+}
+
+.senha {
+    margin-top: 20px;
+    margin-right: 185px;
+    margin-bottom: 5px;
+}
+
+input {
+    padding: 10px;
+}
+
+.btn {
+    color: white;
+    cursor: pointer;
+    background-color: rgb(109, 31, 155);
+    border: none;
+    margin-top: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 98px;
+    padding-right: 98px;
+    margin-bottom: 40px;
+}
+
+.btn:active {
+    background-color: rgb(161, 50, 226);
+}
+
+.signup {
+    font: 2px;
+    color: black;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+    

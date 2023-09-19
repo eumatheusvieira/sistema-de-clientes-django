@@ -1,0 +1,52 @@
+.add {
+    margin-left: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(0, 87, 0);
+    font-weight: bold;
+    color: white;
+    padding: 8px;
+}
+.add:active {
+    background-color: rgb(0, 121, 0);
+}
+
+.edit {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #fcbc2c;
+    color: black;
+    padding: 6px;
+}
+
+.delete {
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #f2494c;
+    color: white;
+    padding: 6px;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+}
+th {
+    border: none;
+    border-bottom: 2px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+td {
+    border: none;
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+tr:nth-child(even) {
+    background-color: #f3f3f3;
+  }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/style.css' %}">
+    <title>Treino Django</title>
+</head>
+<body>
+    <div>
+        <form action="" method="post" class="quadro"> {% csrf_token %}
+            <p class="titulo"> FAÇA SEU LOGIN </p> <br>
+
+            <p class="nome"> USERNAME: </p>
+            <input type="text" placeholder="DIGITE SEU NOME DE USUÁRIO" size="30" class="user" name="username">
+            <p class="senha"> SENHA: </p>
+            <input type="password" placeholder="DIGITE SUA SENHA" size="30" class="pass" name="password">
+            {% if messages %}
+            {% for m in messages %}
+                <div class="alert alert-warning" role="alert" style="color: red; margin-top: 6px;">
+                {{ m }}
+                </div>
+            {% endfor %}
+            {% endif %}
+            <button type="submit" class="btn">ENTRAR</button>
+            <a class="signup" href="/registrar"> SIGN UP</a>
+        </form>
+    </div>
+</body>
+</html>

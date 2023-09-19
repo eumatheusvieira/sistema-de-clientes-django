@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static '/add.css' %}">
+    <title>Adicionar Clientes</title>
+</head>
+<body>
+    <div class="card">
+        <div class="card-body">
+            <h3 style="margin-left: 20px;">EDITAR CLIENTES</h3>
+            <hr>
+            <form action="" method="post"> {% csrf_token %}
+                {{ form.as_p }}
+                <button class="add" type="submit">Salvar</button>
+                <a href="{% url 'index' %}" class="delete">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
